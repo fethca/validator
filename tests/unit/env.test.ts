@@ -12,6 +12,8 @@ describe('validateEnv', () => {
     expect(env).toEqual({
       APP_STAGE: 'test',
       REDIS_PASSWORD: 'REDIS_PASSWORD',
+      REDIS_CACHE_DURATION: 1200,
+      REDIS_HOST: 'localhost',
       REDIS_PORT: 12,
     })
   })

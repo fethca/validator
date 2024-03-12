@@ -39,7 +39,7 @@ export const logsValidators: LogsEnv = {
   LOG_SILENT: bool({ default: false }),
 }
 
-export function validateEnv<T>(validators: T): CleanedEnv<BaseEnv & T & RedisEnv & LogsEnv & MongoEnv> {
+export function validateEnv<T>(validators: T): CleanedEnv<BaseEnv & T> {
   return {
     ...cleanEnv<T>(process.env, validators),
     ...cleanEnv<BaseEnv>(process.env, baseValidators),
