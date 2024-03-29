@@ -11,8 +11,9 @@
   "license": "ISC",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "lint": "eslint \"{src,tests}/**/*.ts\"",
     "format": "prettier -w \"{src,tests}/**/*.ts\"",
+    "lint": "eslint \"{src,tests}/**/*.ts\"",
+    "test": "vitest run --coverage",
     "version:patch": "version patch",
     "version:minor": "version minor",
     "version:major": "version major"
@@ -22,16 +23,21 @@
     "url": "git@github.com:fethca/validator.git"
   },
   "devDependencies": {
-    "@fethcat/eslint-plugin": "^0.0.2",
-    "@fethcat/prettier-config": "^1.0.4",
-    "@fethcat/tests": "^0.0.7",
-    "@fethcat/version": "^0.0.6",
-    "@types/node": "^20.11.25",
+    "@fethcat/eslint-plugin": "^0.0.3",
+    "@fethcat/prettier-config": "^1.0.5",
+    "@fethcat/tests": "^0.0.14",
+    "@fethcat/version": "^0.0.8",
+    "@types/node": "^20.11.30",
     "dotenv": "^16.4.5",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "dependencies": {
+    "@vitest/coverage-v8": "^1.4.0",
+    "envalid": "^8.0.0",
+    "vitest": "^1.4.0"
+  },
+  "peerDependencies": {
     "envalid": "^8.0.0"
   },
   "eslintConfig": {
