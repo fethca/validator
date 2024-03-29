@@ -1,7 +1,7 @@
-import dotenv from 'dotenv'
+import { config } from 'dotenv'
 import { CleanedEnv, RequiredValidatorSpec, ValidatorSpec, bool, cleanEnv, host, num, port, str } from 'envalid'
 
-dotenv.config()
+config()
 
 type BaseEnv = { APP_STAGE: RequiredValidatorSpec<'local' | 'dev' | 'prod' | 'test'> }
 
