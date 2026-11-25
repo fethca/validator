@@ -14,9 +14,9 @@
     "format": "prettier -w \"{src,tests}/**/*.ts\"",
     "lint": "eslint \"{src,tests}/**/*.ts\"",
     "test": "vitest run --coverage",
-    "version:patch": "version patch",
-    "version:minor": "version minor",
-    "version:major": "version major"
+    "version:patch": "fethca-version patch",
+    "version:minor": "fethca-version minor",
+    "version:major": "fethca-version major"
   },
   "repository": {
     "type": "git",
@@ -25,17 +25,18 @@
   "devDependencies": {
     "@fethcat/eslint-plugin": "^0.0.3",
     "@fethcat/prettier-config": "^1.0.5",
-    "@fethcat/tests": "^0.0.14",
-    "@fethcat/version": "^0.0.8",
-    "@types/node": "^20.11.30",
-    "dotenv": "^16.4.5",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.3"
+    "@fethcat/tests": "^0.1.0",
+    "@fethcat/version": "^0.1.0",
+    "@types/node": "^24.19.4",
+    "@vitest/coverage-v8": "^5.1.2",
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.2"
   },
   "dependencies": {
-    "@vitest/coverage-v8": "^1.4.0",
-    "envalid": "^8.0.0",
-    "vitest": "^1.4.0"
+    "dotenv": "^16.4.5",
+    "envalid": "^8.0.0"
   },
   "peerDependencies": {
     "envalid": "^8.0.0"
@@ -45,5 +46,9 @@
       "plugin:@fethcat/back"
     ]
   },
-  "prettier": "@fethcat/prettier-config"
+  "prettier": "@fethcat/prettier-config",
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@9.15.9"
 }
